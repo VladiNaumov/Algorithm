@@ -1,18 +1,18 @@
-package com.NaumDeveloper.Task3.lesson3.queue;
+package com.NaumDeveloper.Task3.queue;
 
-public class PriorityQueue<E extends Comparable<? super E>> implements Queue<E> {
+public class PriorityQueue<T extends Comparable<? super T>> implements IQueue<T> {
 
-    private final E[] data;
+    private final T[] data;
     private int size;
 
     @SuppressWarnings("unchecked")
     public PriorityQueue(int maxSize) {
-        this.data = (E[]) new Comparable[maxSize];
+        this.data = (T[]) new Comparable[maxSize];
     }
 
     // O(N)
     @Override
-    public boolean insert(E value) {
+    public boolean insert(T value) {
         if (isFull()) {
             return false;
         }
@@ -32,12 +32,12 @@ public class PriorityQueue<E extends Comparable<? super E>> implements Queue<E> 
     }
 
     @Override
-    public E remove() {
+    public T remove() {
         return isEmpty() ? null : data[--size];
     }
 
     @Override
-    public E peekFront() {
+    public T peekFront() {
         return data[size - 1];
     }
 

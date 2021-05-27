@@ -1,4 +1,4 @@
-package com.NaumDeveloper.Task2.hw;
+package com.NaumDeveloper.Task2;
 
 public interface IMyArray<T> {
     void add(T value);

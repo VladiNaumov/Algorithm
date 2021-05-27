@@ -1,26 +1,25 @@
-package com.NaumDeveloper.Task3.lesson3.queue;
+package com.NaumDeveloper.Task3.queue;
 
-public class QueueImpl<E> implements Queue<E> {
+public class Queue<T> implements IQueue<T>{
 
     private static final int HEAD_DEFAULT = 0;
     private static final int TAIL_DEFAULT = -1;
 
-    private final E[] data;
+    private final T[] data;
     private int size;
 
     private int tail;
     private int head;
 
     @SuppressWarnings("unchecked")
-    public QueueImpl(int maxSize) {
-        this.data = (E[]) new Object[maxSize];
+    public Queue(int maxSize) {
+        this.data = (T[]) new Object[maxSize];
         this.head = HEAD_DEFAULT;
         this.tail = TAIL_DEFAULT;
     }
-
     // O(1)
     @Override
-    public boolean insert(E value) {
+    public boolean insert(T value) {
         if (isFull()) {
             return false;
         }
@@ -37,7 +36,7 @@ public class QueueImpl<E> implements Queue<E> {
 
     // O(1)
     @Override
-    public E remove() {
+    public T remove() {
         if (isEmpty()) {
             return null;
         }
@@ -46,14 +45,14 @@ public class QueueImpl<E> implements Queue<E> {
             head = HEAD_DEFAULT;
         }
 
-        E value = data[head++];
+        T value = data[head++];
         size--;
 
         return value;
     }
 
     @Override
-    public E peekFront() {
+    public T peekFront() {
         return data[head];
     }
 
@@ -72,3 +71,4 @@ public class QueueImpl<E> implements Queue<E> {
         return size == data.length;
     }
 }
+

@@ -1,4 +1,4 @@
-package com.NaumDeveloper.Task2.hw;
+package com.NaumDeveloper.Task2;
 
 
 import java.time.Duration;

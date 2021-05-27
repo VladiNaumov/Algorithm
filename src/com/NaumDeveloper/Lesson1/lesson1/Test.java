@@ -1,4 +1,4 @@
-package com.NaumDeveloper.Task1.lesson1;
+package com.NaumDeveloper.Lesson1.lesson1;
 
 public class Test {
 

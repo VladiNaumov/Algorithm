@@ -1,4 +1,4 @@
-package com.NaumDeveloper.Task2.lesson2;
+package com.NaumDeveloper.Lesson2;
 
 public class SortedArrayImpl<E extends Comparable<? super E>> extends ArrayImpl<E> {
 
