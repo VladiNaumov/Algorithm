@@ -53,6 +53,7 @@ public class MyStack <T>implements IStack<T> {
         return size == data.length;
     }
 
+
     //Вывод на экран
     @Override
     public void display() {
@@ -61,8 +62,11 @@ public class MyStack <T>implements IStack<T> {
         System.out.println(this);
     }
 
+
+
+
     @Override
-    public String toString() {
+     public String toString() {
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < size; i++) {
             sb.append(data[i]);
@@ -74,4 +78,6 @@ public class MyStack <T>implements IStack<T> {
         sb.append("]");
         return sb.toString();
     }
+
+
 }

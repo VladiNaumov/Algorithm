@@ -1,14 +1,25 @@
 package com.NaumDeveloper.Task3.queue;
 
+//реалезация абстрактной структуры ОЧЕРЕДЬ
+
+
+import java.util.Arrays;
+
 public class Queue<T> implements IQueue<T>{
 
+    //начало очереди
     private static final int HEAD_DEFAULT = 0;
+
+    //конец очереди
     private static final int TAIL_DEFAULT = -1;
 
     private final T[] data;
     private int size;
 
+    //метка конца очереди
     private int tail;
+
+    //метка начала очереди
     private int head;
 
     @SuppressWarnings("unchecked")
@@ -18,6 +29,8 @@ public class Queue<T> implements IQueue<T>{
         this.tail = TAIL_DEFAULT;
     }
     // O(1)
+
+    //Данный метод говорит можем ли мы добавить значения или нет.
     @Override
     public boolean insert(T value) {
         if (isFull()) {
@@ -35,6 +48,7 @@ public class Queue<T> implements IQueue<T>{
     }
 
     // O(1)
+    //удаление элемента из очереди (в очереди удаляется перый элемент)
     @Override
     public T remove() {
         if (isEmpty()) {
@@ -51,9 +65,16 @@ public class Queue<T> implements IQueue<T>{
         return value;
     }
 
+    //начало очереди
     @Override
     public T peekFront() {
         return data[head];
+    }
+
+    //метка конца очереди
+    @Override
+    public T peekTeil() {
+        return data[tail];
     }
 
     @Override
@@ -69,6 +90,11 @@ public class Queue<T> implements IQueue<T>{
     @Override
     public boolean isFull() {
         return size == data.length;
+    }
+
+    @Override
+    public String toString() {
+        return "Queue{" + "data=" + Arrays.toString(data) + '}';
     }
 }
 

@@ -22,4 +22,6 @@ public interface IStack<T> {
 
     //Вывод на экран
     void display();
+
+
 }

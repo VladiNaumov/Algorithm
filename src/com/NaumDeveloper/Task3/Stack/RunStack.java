@@ -1,16 +1,17 @@
 package com.NaumDeveloper.Task3.Stack;
 
 
-public class StackRun {
+public class RunStack {
 
     public static void main(String[] args) {
 
-        testStack();
+        //testStack();
+        TaskRevers();
+
     }
 
     private static void testStack() {
         MyStack<Integer> stack = new MyStack<>(5);
-
 
 
         System.out.println("Add value 1: " + addToStack(stack, 1));
@@ -20,9 +21,6 @@ public class StackRun {
         System.out.println("Add value 5: " + addToStack(stack, 5));
         System.out.println("Add value 6: " + addToStack(stack, 6));
 
-
-
-
         System.out.println("Наличие элементов в стеке " + stack);
 
         System.out.println("Размер стека (Stack size): " + stack.size());
@@ -31,15 +29,15 @@ public class StackRun {
         System.out.println("Чтение элемента с вершины (Stack peek) : " + stack.peek());
 
 
-        //Производим очищения стека
-        while (!stack.isEmpty()) {
-            System.out.println(stack.pop());
-        }
 
         System.out.println("Производим очищения стека: ");
         System.out.println("Наличие элементов в стеке " + stack);
         System.out.println("Размер стека (Stack size): " + stack.size());
 
+        //Производим очищения стека
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
 
     }
 
@@ -56,5 +54,34 @@ public class StackRun {
         }
 
         return false;
+    }
+
+    public static void TaskRevers(){
+        String str = "TervetuloaSuomeen";
+
+        System.out.println(str);
+        MyStack<Character> st = new MyStack<>(str.length());
+
+        for (int i = 0; i < str.length(); i++) {
+            st.push(str.charAt(i));
+        }
+
+        while ( !st.isEmpty() ) {
+            System.out.print(st.pop());
+        }
+
+
+        System.out.println();
+
+        if (true) {
+            return;
+        }
+
+
+    }
+
+    public void reverStrinBilder(String revers){
+
+        System.out.println(new StringBuilder(revers).reverse());
     }
 }
