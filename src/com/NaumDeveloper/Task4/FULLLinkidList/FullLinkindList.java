@@ -1,7 +1,7 @@
-package com.NaumDeveloper.Task4.fullLinkidList;
-
+package com.NaumDeveloper.Task4.FULLLinkidList;
 
 /*
+
 public class FullLinkindList <E>implements IFullLinkindList<E>{
 
     //данное поле считает количества элементов в нашем списке
@@ -180,3 +180,5 @@ public class FullLinkindList <E>implements IFullLinkindList<E>{
 }
 
  */
+
+

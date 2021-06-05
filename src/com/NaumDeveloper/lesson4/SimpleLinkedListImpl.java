@@ -1,6 +1,7 @@
 package com.NaumDeveloper.lesson4;
 
-import NaumDeveloper.iterator.ListIterator;
+
+import com.NaumDeveloper.lesson4.iterator.ListIterator;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

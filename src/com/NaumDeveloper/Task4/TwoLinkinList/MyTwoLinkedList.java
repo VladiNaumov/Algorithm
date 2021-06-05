@@ -1,7 +1,5 @@
 package com.NaumDeveloper.Task4.TwoLinkinList;
 
-import java.util.Iterator;
-
 //обычный (простой связанный список) -> LinkingList
 
 public class MyTwoLinkedList<E> implements ITwoLinkedList<E> {

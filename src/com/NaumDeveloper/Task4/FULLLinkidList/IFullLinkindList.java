@@ -1,6 +1,5 @@
-package com.NaumDeveloper.Task4.fullLinkidList;
+package com.NaumDeveloper.Task4.FULLLinkidList;
 
-import com.TwoLinkinList.ITwoLinkedList;
 
 public interface IFullLinkindList <E> {
 
@@ -58,3 +57,4 @@ public interface IFullLinkindList <E> {
         }
     }
 }
+

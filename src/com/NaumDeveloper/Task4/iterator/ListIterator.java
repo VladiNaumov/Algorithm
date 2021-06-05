@@ -1,6 +1,8 @@
 package com.NaumDeveloper.Task4.iterator;
 
-public interface ListIterator<E> extends Iterable<E>{
+import java.util.Iterator;
+
+public interface ListIterator<E> extends Iterator<E> {
 
     void reset();
 

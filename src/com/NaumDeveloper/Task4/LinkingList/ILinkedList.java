@@ -1,7 +1,40 @@
 package com.NaumDeveloper.Task4.LinkingList;
 
-public interface ILinkedList<E>  {
+public interface ILinkedList<E> extends Iterable<E> {
 
+    void insertFirst(E value);
+
+    E removeFirst();
+
+    boolean remove(E value);
+
+    boolean contains(E value);
+
+    int size();
+
+    boolean isEmpty();
+
+    void display();
+
+    E getFirst();
+
+    class Node<E> {
+        E item;
+        Node<E> next;
+        Node<E> previous;
+
+        public Node(E item, Node<E> next) {
+            this(item, next, null);
+        }
+
+        public Node(E item, Node<E> next, Node<E> previous) {
+            this.item = item;
+            this.next = next;
+            this.previous = previous;
+        }
+    }
+
+    /*
     //Вставляем (добовляеи) элемент в начало списка
     void insertFirst(E value);
 
@@ -34,11 +67,19 @@ public interface ILinkedList<E>  {
        // хранит ссылку на следующий элемент
         Node<E> next;
 
-        //конструктор
+        Node<E> previous;
+
         public Node(E item, Node<E> next) {
+            this(item, next, null);
+        }
+
+        public Node(E item, Node<E> next, Node<E> previous) {
             this.item = item;
             this.next = next;
+            this.previous = previous;
         }
     }
+
+     */
 
 }
