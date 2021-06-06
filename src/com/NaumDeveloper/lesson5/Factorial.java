@@ -1,4 +1,4 @@
-package com.NaumDeveloper.lesson5.FirstHour;
+package com.NaumDeveloper.lesson5;
 
 //5! = 5 * 4 * 3 * 2 * 1 = 120
 public class Factorial {

@@ -1,6 +1,6 @@
-package com.NaumDeveloper.lesson5.SecondHour;
+package com.NaumDeveloper.lesson5.RecursSerteArray;
 
-public interface IMyArray<T> {
+public interface IArray<T> {
     void add(T value);
 
     T get(int index);

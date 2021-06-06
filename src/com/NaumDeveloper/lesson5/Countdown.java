@@ -1,4 +1,4 @@
-package com.NaumDeveloper.lesson5.FirstHour;
+package com.NaumDeveloper.lesson5;
 
 public class Countdown {
 

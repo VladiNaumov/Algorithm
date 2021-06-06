@@ -1,4 +1,4 @@
-package com.NaumDeveloper.lesson5.SecondHour;
+package com.NaumDeveloper.lesson5;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

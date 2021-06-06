@@ -1,20 +1,20 @@
-package com.NaumDeveloper.lesson5.SecondHour;
+package com.NaumDeveloper.lesson5.RecursSerteArray;
 
 import java.util.Arrays;
 
 
-public class MyArray<T extends Comparable<? super T>> implements IMyArray<T>{
+public class RecSortedArray<T extends Comparable<? super T>> implements IArray<T> {
     private static final int DEFAULT_CAPACITY = 8;
 
     protected T[] data;
     protected int size;
 
     @SuppressWarnings("unchecked")
-    public MyArray(int initialCapacity) {
+    public RecSortedArray(int initialCapacity) {
         this.data = (T[]) new Comparable[initialCapacity];
     }
 
-    public MyArray() {
+    public RecSortedArray() {
         this(DEFAULT_CAPACITY);
     }
 
@@ -71,12 +71,23 @@ public class MyArray<T extends Comparable<? super T>> implements IMyArray<T>{
 
     @Override
     public int indexOf(T value) {
-        for (int i = 0; i < size; i++) {
-            if (value.equals(data[i])) {
-                return i;
-            }
+        return recBinaryFind(value, 0, size - 1);
+    }
+
+
+    private int recBinaryFind(T value, int low, int high) {
+        if (low > high) {
+            return -1;
         }
-        return -1;
+
+        int mid = (low + high) / 2;
+        if (data[mid].equals(value)) {
+            return mid;
+        } else if (value.compareTo(data[mid]) > 0) {
+            return recBinaryFind(value, mid + 1, high);
+        } else {
+            return recBinaryFind(value, low, mid - 1);
+        }
     }
 
     @Override
