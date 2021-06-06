@@ -1,4 +1,4 @@
-package com.NaumDeveloper.lesson5.RecursSerteArray;
+package com.NaumDeveloper.lesson5.RecursSortArray;
 
 import java.util.Arrays;
 
