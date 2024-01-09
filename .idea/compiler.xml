@@ -10,11 +10,11 @@
         <module name="Lesson4" />
         <module name="Lesson7" />
         <module name="Lesson6" />
-        <module name="Demo" />
         <module name="Lesson1" />
         <module name="Lesson3" />
         <module name="Lesson2" />
         <module name="Lesson8" />
+        <module name="Lesson" />
       </profile>
     </annotationProcessing>
   </component>

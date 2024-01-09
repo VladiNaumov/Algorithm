@@ -1,4 +1,4 @@
-package Task4.LinkingList;
+package ch04;
 
 
 import ch04.iterator.ListIterator;
@@ -6,24 +6,13 @@ import ch04.iterator.ListIterator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class SimpleLinkedList<E> implements ILinkedList<E> {
+public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
-    //данное поле считает количества элементов в нашем списке
     protected int size;
-    //Это класс описывающий первый элемент связывающего списка
     protected Node<E> firstElement;
 
     @Override
     public void insertFirst(E value) {
-
-         /*
-        Node <E> node =  new Node<>(value, firstElement);
-        firstElement = node;
-        size++;
-
-        */
-
-        // Правельное написание без избуточности кода!
         firstElement = new Node<>(value, firstElement);
         size++;
     }
@@ -94,7 +83,6 @@ public class SimpleLinkedList<E> implements ILinkedList<E> {
     @Override
     public void display() {
         System.out.println("----------");
-        // Эта запись равна System.out.println(toString());
         System.out.println(this);
         System.out.println("----------");
     }
@@ -133,13 +121,13 @@ public class SimpleLinkedList<E> implements ILinkedList<E> {
 
     private class LinkedListIterator implements ListIterator<E> {
 
-        private final SimpleLinkedList<E> list;
+        private final SimpleLinkedListImpl<E> list;
 
         private Node<E> current;
         private Node<E> previous;
 
         public LinkedListIterator() {
-            this.list = SimpleLinkedList.this;
+            this.list = SimpleLinkedListImpl.this;
             reset();
         }
 
