@@ -1,7 +1,4 @@
 package ch02;
-
-
-
 public class TestDynamicArray {
 
     public static void main(String[] args) {
